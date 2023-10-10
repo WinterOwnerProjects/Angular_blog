@@ -1,0 +1,25 @@
+<header class="px-24 pt-10 pb-3">
+    <app-header></app-header>
+</header>
+<main class="px-24">
+    <section class="flex flex-col items-center gap-5 py-10 px-40">
+        <h1 class="text-4xl">Posts Examples</h1>
+        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra lectus a quam porttitor maximus.</p>
+    </section>
+    <section class="pt-7">
+        <div class="grid grid-cols-3 gap-y-20 w-full">
+            <div class="flex justify-center" *ngFor="let post of this.posts;">
+                <a [routerLink]="['post', post.post_slug]">
+                    <app-card-blog post_title="{{post.post_title}}" post_resume="{{post.post_resume}}" post_photo="{{post.post_image}}" post_date="{{post.post_date}} - {{post.read_time}} min read">{{post.post_title}}</app-card-blog>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="newsletter" class="py-12">
+        <app-newsletter></app-newsletter>
+    </section>
+</main>
+<hr>
+<footer class="px-24 py-5" id="social">
+    <app-footer></app-footer>
+</footer>
