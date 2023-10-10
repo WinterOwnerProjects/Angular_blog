@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    color:#fff;
+    font-family: Roboto;
+}
+.blue_gradient_text_color{
+    background: linear-gradient(270deg, #22D3EE 32.96%, #0EA5E9 52.81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.gradient_button{
+    border-radius: 30px;
+    background: var(--Gradient, linear-gradient(270deg, #22D3EE 50%, #0EA5E9 100%));
+
+}

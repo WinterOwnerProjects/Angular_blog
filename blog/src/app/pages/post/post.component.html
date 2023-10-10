@@ -1,0 +1,21 @@
+<header class="px-24 pt-10 pb-3">
+    <app-header></app-header>
+</header>
+<main class="px-24">
+    <section class="flex flex-col items-center gap-5 py-10 px-40">
+        <h1 class="text-4xl">{{this.post_title}}</h1>
+    </section>
+    <section class="flex flex-col gap-5">
+        <span class="pl-8 text-gray-400">By {{this.post_author}} on {{this.post_date}} - {{this.post_read_time}} min read</span>
+        <div class="flex justify-center">
+            <img src="{{this.post_photo}}" alt="" class="rounded-3xl">
+        </div>
+    </section>
+    <section>
+        <div class="text-xl py-12 px-10 text-justify" [innerHTML]="this.post_content"></div>
+    </section>
+</main>
+<hr>
+<footer class="px-24 py-5" id="social">
+    <app-footer></app-footer>
+</footer>
